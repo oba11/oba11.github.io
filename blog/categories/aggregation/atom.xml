@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Aggregation | Oluwaseun Obajobi]]></title>
+  <link href="http://blog.obajobi.com/blog/categories/aggregation/atom.xml" rel="self"/>
+  <link href="http://blog.obajobi.com/"/>
+  <updated>2014-02-22T01:04:11+04:00</updated>
+  <id>http://blog.obajobi.com/</id>
+  <author>
+    <name><![CDATA[Oluwaseun Obajobi]]></name>
+    <email><![CDATA[oba@obajobi.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Using Aggregation Plugin With Collectd]]></title>
+    <link href="http://blog.obajobi.com/blog/2014/02/21/using-aggregation-plugin-with-collectd/"/>
+    <updated>2014-02-21T15:43:49+04:00</updated>
+    <id>http://blog.obajobi.com/blog/2014/02/21/using-aggregation-plugin-with-collectd</id>
+    <content type="html"><![CDATA[<p>Working with <a href="http://www.namshi.com">Namshi</a> has opened my mind to a wide of tools for effectiveness. Like always a quote &ldquo;Graph everything&rdquo;.
+Initially, we were using <a href="https://www.icinga.org/about/icingaweb">icinga-web</a> for graphing but seems like graphite introduces something missing and better than other tools.</p>
+
+<p>We started using collectd for graphing system metrics to graphite. Its amazingly easy to setup and configure. You can find the salt state for collectd <a href="https://github.com/oba11/salt-collectd">here</a>.
+Collectd sends metrics to graphite straight of the box which is beauitful.
+Our systems has multiple cores and really not intuitive to have cores being analyzed separately, its good for individual core analysis but with hyperthreading.
+Then I got to know of aggregation plugin and Postcache chain which does exatly what I want.</p>
+
+<p>Postcache chan sends the cpu metric to aggregate and truncates the rest.</p>
+
+<p>```
+<Chain "PostCache">
+  <Rule></p>
+
+<pre><code>&lt;Match regex&gt;
+  Plugin "^cpu$"
+&lt;/Match&gt;
+&lt;Target write&gt;
+  Plugin "aggregate"
+&lt;/Target&gt;
+Target stop
+</code></pre>
+
+<p>  </Rule>
+</Chain>
+```</p>
+
+<p>Configure the aggregation plugin for cpu to merge all of them and only output average and sum of the metric.</p>
+
+<p>```
+<Plugin "aggregation">
+  <Aggregation></p>
+
+<pre><code>Plugin "cpu"
+Type "cpu"
+
+GroupBy "Host"
+GroupBy "TypeInstance"
+
+CalculateSum true
+CalculateAverage true
+</code></pre>
+
+<p>  </Aggregation>
+</Plugin>
+```</p>
+
+<p>This is much more better to analysis and do prefer it to others.</p>
+]]></content>
+  </entry>
+  
+</feed>

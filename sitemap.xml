@@ -1,8 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
+        <loc>http://blog.obajobi.com/blog/2014/02/21/using-aggregation-plugin-with-collectd/</loc>
+        <lastmod>2014-02-22T01:04:00+04:00</lastmod>
+    </url>
+    <url>
         <loc>http://blog.obajobi.com/</loc>
-        <lastmod>2014-02-21T15:04:02+04:00</lastmod>
+        <lastmod>2014-02-22T01:04:00+04:00</lastmod>
     </url>
     <url>
         <loc>http://blog.obajobi.com/robots.txt</loc>
@@ -10,7 +14,7 @@
     </url>
     <url>
         <loc>http://blog.obajobi.com/blog/archives/</loc>
-        <lastmod>2014-02-21T15:04:02+04:00</lastmod>
+        <lastmod>2014-02-22T01:04:00+04:00</lastmod>
     </url>
     <url>
         <loc>http://blog.obajobi.com/blog/categories/</loc>
