@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Oluwaseun Obajobi]]></title>
-  <link href="http://oba11.github.io/atom.xml" rel="self"/>
-  <link href="http://oba11.github.io/"/>
-  <updated>2014-02-21T15:06:02+04:00</updated>
-  <id>http://oba11.github.io/</id>
+  <link href="http://blog.obajobi.com/atom.xml" rel="self"/>
+  <link href="http://blog.obajobi.com/"/>
+  <updated>2014-02-21T15:23:20+04:00</updated>
+  <id>http://blog.obajobi.com/</id>
   <author>
     <name><![CDATA[Oluwaseun Obajobi]]></name>
     <email><![CDATA[oba@obajobi.com]]></email>

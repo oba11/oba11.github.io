@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://oba11.github.io/sitemap.xml 
+Sitemap: http://blog.obajobi.com/sitemap.xml 
