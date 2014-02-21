@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Devops | Oluwaseun Obajobi]]></title>
   <link href="http://blog.obajobi.com/blog/categories/devops/atom.xml" rel="self"/>
   <link href="http://blog.obajobi.com/"/>
-  <updated>2014-02-22T01:56:15+04:00</updated>
+  <updated>2014-02-22T02:02:55+04:00</updated>
   <id>http://blog.obajobi.com/</id>
   <author>
     <name><![CDATA[Oluwaseun Obajobi]]></name>
@@ -26,7 +26,7 @@ Collectd sends metrics to graphite straight of the box which is beauitful.
 Our systems has multiple cores and really not intuitive to have cores being analyzed separately, its good for individual core analysis but with hyperthreading.
 Then I got to know of aggregation plugin and Postcache chain which does exatly what I want.</p>
 
-<p>Postcache chan sends the cpu metric to aggregate and truncates the rest.</p>
+<p>Postcache chain sends the cpu metric to aggregate and truncates the rest.</p>
 
 <p>```
 <Chain "PostCache">
