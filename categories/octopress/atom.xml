@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Octopress | Oluwaseun Obajobi]]></title>
+  <link href="http://blog.obajobi.com/categories/octopress/atom.xml" rel="self"/>
+  <link href="http://blog.obajobi.com/"/>
+  <updated>2014-02-22T23:01:43+04:00</updated>
+  <id>http://blog.obajobi.com/</id>
+  <author>
+    <name><![CDATA[Oluwaseun Obajobi]]></name>
+    <email><![CDATA[oba@obajobi.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Adding Disqus Comments to Your Octopress Blog]]></title>
+    <link href="http://blog.obajobi.com/2014/02/adding-disqus-comments-to-your-octopress-blog/"/>
+    <updated>2014-02-22T22:12:06+04:00</updated>
+    <id>http://blog.obajobi.com/2014/02/adding-disqus-comments-to-your-octopress-blog</id>
+    <content type="html"><![CDATA[<h2>Create your Disqus account</h2>
+
+<p>To add disqus comments to your octopress blog site.
+Visit <a href="http://www.disqus.com">Disqus</a> to signup.</p>
+
+<blockquote><p>Remember to Verify your email address afterwards.</p></blockquote>
+
+<h2>Create and Configure Disqus site</h2>
+
+<p>Login to your disqus account. <br/>
+Create a <a href="http://disqus.com/admin/create/">New Site</a> for comments.<br/>
+Once done, go to your <em>Settings</em> tab.<br/></p>
+
+<blockquote><p><code>http://shortname.disqus.com/admin/settings/general/</code>.</p></blockquote>
+
+<p>Add your octopress site to the <em>Website URL</em>. <br/>
+   <img src="../images/disqus-1.png" alt="alt text" /></p>
+
+<p>Click on the advanced tab, and add your octopress domain to the <em>Trusted Domains</em>.
+   <img src="../images/disqus-2.png" alt="alt text" /></p>
+
+<p>Save the changes.<br/></p>
+
+<h2>Add the Disqus ID to Octopress config file</h2>
+
+<p>Open the octopress config file and add your username to it.</p>
+
+<p>```
+:~$ cd octopress
+:~$ vi _config.yml</p>
+
+<p>disqus_short_name: my_disqus_userid # replace it with the userid (not email address) you created in disqus
+disqus_show_comment_count: true
+```</p>
+
+<p>Save the changes and run <code>rake generate</code> and <code>rake deploy</code> and there you go to start commenting.</p>
+]]></content>
+  </entry>
+  
+</feed>

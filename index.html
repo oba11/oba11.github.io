@@ -9,7 +9,7 @@
 	<meta name="author" content="Oluwaseun Obajobi">
 
 	
-	<meta name="description" content="Feb 21st, 2014 aggregation, collectd, devops, graphite, saltstack Comments Using Aggregation Plugin With Collectd Working with Namshi has opened my &hellip;">
+	<meta name="description" content="Feb 22nd, 2014 blog, disqus, octopress Comments Adding Disqus Comments to Your Octopress Blog Create your Disqus account To add disqus comments to &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -95,6 +95,82 @@
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-22T22:12:06+04:00" data-updated="true" itemprop="datePublished">Feb 22<span>nd</span>, 2014</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/categories/blog/'>blog</a>, <a class='category' href='/categories/disqus/'>disqus</a>, <a class='category' href='/categories/octopress/'>octopress</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/2014/02/adding-disqus-comments-to-your-octopress-blog/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/2014/02/adding-disqus-comments-to-your-octopress-blog/" itemprop="url">Adding Disqus Comments to Your Octopress Blog</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<h2>Create your Disqus account</h2>
+
+<p>To add disqus comments to your octopress blog site.
+Visit <a href="http://www.disqus.com">Disqus</a> to signup.</p>
+
+<blockquote><p>Remember to Verify your email address afterwards.</p></blockquote>
+
+<h2>Create and Configure Disqus site</h2>
+
+<p>Login to your disqus account. <br/>
+Create a <a href="http://disqus.com/admin/create/">New Site</a> for comments.<br/>
+Once done, go to your <em>Settings</em> tab.<br/></p>
+
+<blockquote><p><code>http://shortname.disqus.com/admin/settings/general/</code>.</p></blockquote>
+
+<p>Add your octopress site to the <em>Website URL</em>. <br/>
+   <img src="../images/disqus-1.png" alt="alt text" /></p>
+
+<p>Click on the advanced tab, and add your octopress domain to the <em>Trusted Domains</em>.
+   <img src="../images/disqus-2.png" alt="alt text" /></p>
+
+<p>Save the changes.<br/></p>
+
+<h2>Add the Disqus ID to Octopress config file</h2>
+
+<p>Open the octopress config file and add your username to it.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>:~$ cd octopress
+</span><span class='line'>:~$ vi _config.yml
+</span><span class='line'>
+</span><span class='line'>disqus_short_name: my_disqus_userid # replace it with the userid (not email address) you created in disqus
+</span><span class='line'>disqus_show_comment_count: true</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Save the changes and run <code>rake generate</code> and <code>rake deploy</code> and there you go to start commenting.</p>
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">

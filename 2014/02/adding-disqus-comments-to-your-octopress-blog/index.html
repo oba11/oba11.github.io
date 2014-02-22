@@ -5,11 +5,12 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Blog Archives - Oluwaseun Obajobi</title>
+	<title>Adding Disqus Comments to your Octopress Blog - Oluwaseun Obajobi</title>
 	<meta name="author" content="Oluwaseun Obajobi">
 
 	
-	<meta name="description" content="2014 Feb 22 blog, disqus, octopress Comments Adding Disqus Comments to your Octopress Blog Feb 21 aggregation, collectd, devops, graphite, saltstack &hellip;">
+	<meta name="description" content="Adding Disqus Comments to Your Octopress Blog Create your Disqus account To add disqus comments to your octopress blog site.
+Visit Disqus to signup &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +20,7 @@
 
 	<link href="/atom.xml" rel="alternate" title="Oluwaseun Obajobi" type="application/atom+xml">
 	
-	<link rel="canonical" href="http://blog.obajobi.com/archives/">
+	<link rel="canonical" href="http://blog.obajobi.com/2014/02/adding-disqus-comments-to-your-octopress-blog/">
 	<link href="/favicon.png" rel="shortcut icon">
 	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
 	<link href="/stylesheets/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -93,56 +94,72 @@
 				
 			
 			<div class="mid-col-container">
-				<div id="content" class="inner"><div itemscope itemtype="http://schema.org/Blog">
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">Adding Disqus Comments to Your Octopress Blog</h1>
+	<div class="entry-content" itemprop="articleBody"><h2>Create your Disqus account</h2>
 
-	
+<p>To add disqus comments to your octopress blog site.
+Visit <a href="http://www.disqus.com">Disqus</a> to signup.</p>
+
+<blockquote><p>Remember to Verify your email address afterwards.</p></blockquote>
+
+<h2>Create and Configure Disqus site</h2>
+
+<p>Login to your disqus account. <br/>
+Create a <a href="http://disqus.com/admin/create/">New Site</a> for comments.<br/>
+Once done, go to your <em>Settings</em> tab.<br/></p>
+
+<blockquote><p><code>http://shortname.disqus.com/admin/settings/general/</code>.</p></blockquote>
+
+<p>Add your octopress site to the <em>Website URL</em>. <br/>
+   <img src="../images/disqus-1.png" alt="alt text" /></p>
+
+<p>Click on the advanced tab, and add your octopress domain to the <em>Trusted Domains</em>.
+   <img src="../images/disqus-2.png" alt="alt text" /></p>
+
+<p>Save the changes.<br/></p>
+
+<h2>Add the Disqus ID to Octopress config file</h2>
+
+<p>Open the octopress config file and add your username to it.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>:~$ cd octopress
+</span><span class='line'>:~$ vi _config.yml
+</span><span class='line'>
+</span><span class='line'>disqus_short_name: my_disqus_userid # replace it with the userid (not email address) you created in disqus
+</span><span class='line'>disqus_show_comment_count: true</span></code></pre></td></tr></table></div></figure>
 
 
-	
-	
-	<section class="archives"><h1 class="year">2014</h1>
+<p>Save the changes and run <code>rake generate</code> and <code>rake deploy</code> and there you go to start commenting.</p>
+</div>
 
-<article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<span class="date"><time datetime="2014-02-22T22:12:06+04:00" itemprop="datePublished">Feb 22</time></span>
-		<br>
-		<span class="tags">
-
-
-	<a class='category' href='/categories/blog/'>blog</a>, <a class='category' href='/categories/disqus/'>disqus</a>, <a class='category' href='/categories/octopress/'>octopress</a>
-
-
-</span>
-	    
-	    <span class="comments"><a href="/2014/02/adding-disqus-comments-to-your-octopress-blog/#disqus_thread">Comments</a></span>
-	    
-	</div>
-	<h1 class="title" itemprop="name"><a href="/2014/02/adding-disqus-comments-to-your-octopress-blog/">Adding Disqus Comments to your Octopress Blog</a></h1>
 </article>
 
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
 	
-
-
-<article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<span class="date"><time datetime="2014-02-21T15:43:49+04:00" itemprop="datePublished">Feb 21</time></span>
-		<br>
-		<span class="tags">
-
-
-	<a class='category' href='/categories/aggregation/'>aggregation</a>, <a class='category' href='/categories/collectd/'>collectd</a>, <a class='category' href='/categories/devops/'>devops</a>, <a class='category' href='/categories/graphite/'>graphite</a>, <a class='category' href='/categories/saltstack/'>saltstack</a>
-
-
-</span>
-	    
-	    <span class="comments"><a href="/2014/02/using-aggregation-plugin-with-collectd/#disqus_thread">Comments</a></span>
-	    
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
 	</div>
-	<h1 class="title" itemprop="name"><a href="/2014/02/using-aggregation-plugin-with-collectd/">Using Aggregation Plugin with Collectd</a></h1>
-</article>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
 
-  </section>
-</div></div>
+
+
+<section id="comment">
+    <h1 class="title">Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
 			</div>
 			<footer id="footer" class="inner"><p>
   Copyright &copy; 2014 - Oluwaseun Obajobi -
@@ -156,7 +173,10 @@ Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Sha
       var disqus_shortname = 'oba11';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://blog.obajobi.com/2014/02/adding-disqus-comments-to-your-octopress-blog/';
+        var disqus_url = 'http://blog.obajobi.com/2014/02/adding-disqus-comments-to-your-octopress-blog/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
