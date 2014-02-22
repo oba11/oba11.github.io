@@ -4,7 +4,7 @@
   <title><![CDATA[Oluwaseun Obajobi]]></title>
   <link href="http://blog.obajobi.com/atom.xml" rel="self"/>
   <link href="http://blog.obajobi.com/"/>
-  <updated>2014-02-22T02:02:55+04:00</updated>
+  <updated>2014-02-22T21:33:21+04:00</updated>
   <id>http://blog.obajobi.com/</id>
   <author>
     <name><![CDATA[Oluwaseun Obajobi]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Using Aggregation Plugin with Collectd]]></title>
-    <link href="http://blog.obajobi.com/blog/2014/02/using-aggregation-plugin-with-collectd/"/>
+    <link href="http://blog.obajobi.com/2014/02/using-aggregation-plugin-with-collectd/"/>
     <updated>2014-02-21T15:43:49+04:00</updated>
-    <id>http://blog.obajobi.com/blog/2014/02/using-aggregation-plugin-with-collectd</id>
+    <id>http://blog.obajobi.com/2014/02/using-aggregation-plugin-with-collectd</id>
     <content type="html"><![CDATA[<p>Working with <a href="http://www.namshi.com">Namshi</a> has opened my mind to a wide of tools for effectiveness. Like always a quote &ldquo;Graph everything&rdquo;.
 Initially, we were using <a href="https://www.icinga.org/about/icingaweb">icinga-web</a> for graphing but seems like graphite introduces something missing and better than other tools.</p>
 
