@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Saltstack | Oluwaseun Obajobi]]></title>
-  <link href="http://blog.obajobi.com/blog/categories/saltstack/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Aggregation | Oluwaseun Obajobi]]></title>
+  <link href="http://blog.obajobi.com/categories/aggregation/atom.xml" rel="self"/>
   <link href="http://blog.obajobi.com/"/>
-  <updated>2014-02-22T21:33:21+04:00</updated>
+  <updated>2014-02-22T21:39:15+04:00</updated>
   <id>http://blog.obajobi.com/</id>
   <author>
     <name><![CDATA[Oluwaseun Obajobi]]></name>
