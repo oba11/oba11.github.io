@@ -4,7 +4,7 @@
   <title><![CDATA[Oluwaseun Obajobi]]></title>
   <link href="http://blog.obajobi.com/atom.xml" rel="self"/>
   <link href="http://blog.obajobi.com/"/>
-  <updated>2014-02-22T23:03:01+04:00</updated>
+  <updated>2014-02-22T23:08:25+04:00</updated>
   <id>http://blog.obajobi.com/</id>
   <author>
     <name><![CDATA[Oluwaseun Obajobi]]></name>
@@ -34,10 +34,10 @@ Once done, go to your <em>Settings</em> tab.<br/></p>
 <blockquote><p><code>http://shortname.disqus.com/admin/settings/general/</code>.</p></blockquote>
 
 <p>Add your octopress site to the <em>Website URL</em>. <br/>
-   <img src="../images/disqus-1.png" alt="alt text" /></p>
+   <img src="http://blog.obajobi.com/images/disqus-1.png" alt="alt text" /></p>
 
 <p>Click on the advanced tab, and add your octopress domain to the <em>Trusted Domains</em>.
-   <img src="../images/disqus-2.png" alt="alt text" /></p>
+   <img src="http://blog.obajobi.com/images/disqus-2.png" alt="alt text" /></p>
 
 <p>Save the changes.<br/></p>
 
