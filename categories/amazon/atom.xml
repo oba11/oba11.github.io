@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Amazon | Oluwaseun Obajobi]]></title>
+  <link href="http://blog.obajobi.com/categories/amazon/atom.xml" rel="self"/>
+  <link href="http://blog.obajobi.com/"/>
+  <updated>2014-02-25T16:26:08+04:00</updated>
+  <id>http://blog.obajobi.com/</id>
+  <author>
+    <name><![CDATA[Oluwaseun Obajobi]]></name>
+    <email><![CDATA[oba@obajobi.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Enabling Forward Secrecy on Elastic Load Balancer]]></title>
+    <link href="http://blog.obajobi.com/2014/02/enabling-forward-secrecy-on-elastic-load-balancer/"/>
+    <updated>2014-02-25T16:18:27+04:00</updated>
+    <id>http://blog.obajobi.com/2014/02/enabling-forward-secrecy-on-elastic-load-balancer</id>
+    <content type="html"><![CDATA[<p>Amazon just <a href="http://aws.typepad.com/aws/2014/02/elastic-load-balancing-perfect-forward-secrecy-and-other-security-enhancements.html">announced</a> the expansion encryption ciphers to enable <a href="http://en.wikipedia.org/wiki/Forward_secrecy">perfect forward secrecy</a>.</p>
+
+<p>To enable this feature, login to your <a href="https://console.aws.amazon.com">AWS console</a> and navigate to the Load Balancers section.</p>
+
+<p>Select the <strong>loadbalancer</strong> and navigate to the <strong>Listerners</strong> section.</p>
+
+<p>Click on <strong>Change</strong> under the <em>Cipher</em> Tab <br/>
+   <img src="/images/aws-1.png" alt="alt text" /></p>
+
+<p>Select <strong>ELBSecurityPolicy-2014-01</strong> from the <em>Predefined Security Policies</em> and <strong>Save</strong> the changes. <br/>
+   <img src="/images/aws-2.png" alt="alt text" /></p>
+
+<p>You can test the new changes on <a href="https://www.ssllabs.com/ssltest/analyze.html">Qualys SSL Tab</a> to be sure perfect forward secrecy is enabled.</p>
+]]></content>
+  </entry>
+  
+</feed>
