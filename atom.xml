@@ -4,7 +4,7 @@
   <title><![CDATA[Oluwaseun Obajobi]]></title>
   <link href="http://blog.obajobi.com/atom.xml" rel="self"/>
   <link href="http://blog.obajobi.com/"/>
-  <updated>2014-02-25T16:26:08+04:00</updated>
+  <updated>2014-03-24T16:33:41+04:00</updated>
   <id>http://blog.obajobi.com/</id>
   <author>
     <name><![CDATA[Oluwaseun Obajobi]]></name>
@@ -12,6 +12,56 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Create Navision Stored Procedure with xp_ndo_enumusergroups and xp_ndo_enumuserids missing]]></title>
+    <link href="http://blog.obajobi.com/2014/03/create-navision-stored-procedure-with-xp-ndo-enumusergroups-and-xp-ndo-enumuserids-missing/"/>
+    <updated>2014-03-24T16:20:04+04:00</updated>
+    <id>http://blog.obajobi.com/2014/03/create-navision-stored-procedure-with-xp-ndo-enumusergroups-and-xp-ndo-enumuserids-missing</id>
+    <content type="html"><![CDATA[<p>I encountered an error while reconnecting to navision SQl client after reinstalling the database. It usually comes with this error <strong>The extended stored procedure xp_ndo_enumuserids in the library file xp_ndo.dll, is not available on the xxx server.</strong>
+This has to do with xp_ndo.dll Extended Stored Procedure missing in the SQL Database.</p>
+
+<p>Copy  xp_ndo.dll (for 32bit OS) or xp_ndo_x64.dll (for 64bit OS) from Navision installation CD <code>D:\DVD_BUILD32012\SQLDatabase\PFiles\Microsoft Dynamics NAV\60\Database</code> to SQL Binn folder <code>C:\Program Files\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\Binn</code>.</p>
+
+<p>Install <code>xp_ndo_enumusergroups</code> and <code>xp_ndo_enumuserids</code> as NAV SQL extended stored procedures using SQL Management Studio Query Tab.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>USE master 
+</span><span class='line'>EXEC sp_addextendedproc xp_ndo_enumusergroups, 'C:\Program Files\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\Binn\xp_ndo_x64.dll' 
+</span><span class='line'>GO
+</span><span class='line'>
+</span><span class='line'>GRANT EXECUTE 
+</span><span class='line'>ON [xp_ndo_enumusergroups] 
+</span><span class='line'>TO PUBLIC 
+</span><span class='line'>GO
+</span><span class='line'>
+</span><span class='line'>USE master 
+</span><span class='line'>EXEC  sp_addextendedproc xp_ndo_enumusersids, 'C:\Program Files\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\Binn\xp_ndo_x64.dll' 
+</span><span class='line'>GO
+</span><span class='line'>
+</span><span class='line'>GRANT EXECUTE 
+</span><span class='line'>ON [xp_ndo_enumusersids] 
+</span><span class='line'>TO PUBLIC 
+</span><span class='line'>GO</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Enabling Forward Secrecy on Elastic Load Balancer]]></title>

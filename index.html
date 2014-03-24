@@ -9,7 +9,7 @@
 	<meta name="author" content="Oluwaseun Obajobi">
 
 	
-	<meta name="description" content="Feb 25th, 2014 amazon, aws, elb, security Comments Enabling Forward Secrecy on Elastic Load Balancer Amazon just announced the expansion encryption &hellip;">
+	<meta name="description" content="Mar 24th, 2014 microsoft, mssql, navision, windows Comments Create Navision Stored Procedure With Xp_ndo_enumusergroups and Xp_ndo_enumuserids &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -95,6 +95,84 @@
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-24T16:20:04+04:00" data-updated="true" itemprop="datePublished">Mar 24<span>th</span>, 2014</time></div>
+		<div class="tags">
+
+
+	<a class='category' href='/categories/microsoft/'>microsoft</a>, <a class='category' href='/categories/mssql/'>mssql</a>, <a class='category' href='/categories/navision/'>navision</a>, <a class='category' href='/categories/windows/'>windows</a>
+
+
+</div>
+		
+			<span class="comments"><a href="/2014/03/create-navision-stored-procedure-with-xp-ndo-enumusergroups-and-xp-ndo-enumuserids-missing/#disqus_thread">Comments</a></span>
+		
+	</div>
+	<h1 class="title" itemprop="name"><a href="/2014/03/create-navision-stored-procedure-with-xp-ndo-enumusergroups-and-xp-ndo-enumuserids-missing/" itemprop="url">Create Navision Stored Procedure With Xp_ndo_enumusergroups and Xp_ndo_enumuserids Missing</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>I encountered an error while reconnecting to navision SQl client after reinstalling the database. It usually comes with this error <strong>The extended stored procedure xp_ndo_enumuserids in the library file xp_ndo.dll, is not available on the xxx server.</strong>
+This has to do with xp_ndo.dll Extended Stored Procedure missing in the SQL Database.</p>
+
+<p>Copy  xp_ndo.dll (for 32bit OS) or xp_ndo_x64.dll (for 64bit OS) from Navision installation CD <code>D:\DVD_BUILD32012\SQLDatabase\PFiles\Microsoft Dynamics NAV\60\Database</code> to SQL Binn folder <code>C:\Program Files\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\Binn</code>.</p>
+
+<p>Install <code>xp_ndo_enumusergroups</code> and <code>xp_ndo_enumuserids</code> as NAV SQL extended stored procedures using SQL Management Studio Query Tab.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>USE master 
+</span><span class='line'>EXEC sp_addextendedproc xp_ndo_enumusergroups, 'C:\Program Files\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\Binn\xp_ndo_x64.dll' 
+</span><span class='line'>GO
+</span><span class='line'>
+</span><span class='line'>GRANT EXECUTE 
+</span><span class='line'>ON [xp_ndo_enumusergroups] 
+</span><span class='line'>TO PUBLIC 
+</span><span class='line'>GO
+</span><span class='line'>
+</span><span class='line'>USE master 
+</span><span class='line'>EXEC  sp_addextendedproc xp_ndo_enumusersids, 'C:\Program Files\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\Binn\xp_ndo_x64.dll' 
+</span><span class='line'>GO
+</span><span class='line'>
+</span><span class='line'>GRANT EXECUTE 
+</span><span class='line'>ON [xp_ndo_enumusersids] 
+</span><span class='line'>TO PUBLIC 
+</span><span class='line'>GO</span></code></pre></td></tr></table></div></figure>
+
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">

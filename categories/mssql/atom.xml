@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Mssql | Oluwaseun Obajobi]]></title>
+  <link href="http://blog.obajobi.com/categories/mssql/atom.xml" rel="self"/>
+  <link href="http://blog.obajobi.com/"/>
+  <updated>2014-03-24T16:33:41+04:00</updated>
+  <id>http://blog.obajobi.com/</id>
+  <author>
+    <name><![CDATA[Oluwaseun Obajobi]]></name>
+    <email><![CDATA[oba@obajobi.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Create Navision Stored Procedure With Xp_ndo_enumusergroups and Xp_ndo_enumuserids Missing]]></title>
+    <link href="http://blog.obajobi.com/2014/03/create-navision-stored-procedure-with-xp-ndo-enumusergroups-and-xp-ndo-enumuserids-missing/"/>
+    <updated>2014-03-24T16:20:04+04:00</updated>
+    <id>http://blog.obajobi.com/2014/03/create-navision-stored-procedure-with-xp-ndo-enumusergroups-and-xp-ndo-enumuserids-missing</id>
+    <content type="html"><![CDATA[<p>I encountered an error while reconnecting to navision SQl client after reinstalling the database. It usually comes with this error <strong>The extended stored procedure xp_ndo_enumuserids in the library file xp_ndo.dll, is not available on the xxx server.</strong>
+This has to do with xp_ndo.dll Extended Stored Procedure missing in the SQL Database.</p>
+
+<p>Copy  xp_ndo.dll (for 32bit OS) or xp_ndo_x64.dll (for 64bit OS) from Navision installation CD <code>D:\DVD_BUILD32012\SQLDatabase\PFiles\Microsoft Dynamics NAV\60\Database</code> to SQL Binn folder <code>C:\Program Files\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\Binn</code>.</p>
+
+<p>Install <code>xp_ndo_enumusergroups</code> and <code>xp_ndo_enumuserids</code> as NAV SQL extended stored procedures using SQL Management Studio Query Tab.</p>
+
+<p>```
+USE master
+EXEC sp_addextendedproc xp_ndo_enumusergroups, &lsquo;C:\Program Files\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\Binn\xp_ndo_x64.dll&rsquo;
+GO</p>
+
+<p>GRANT EXECUTE
+ON [xp_ndo_enumusergroups]
+TO PUBLIC
+GO</p>
+
+<p>USE master
+EXEC  sp_addextendedproc xp_ndo_enumusersids, &lsquo;C:\Program Files\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\Binn\xp_ndo_x64.dll&rsquo;
+GO</p>
+
+<p>GRANT EXECUTE
+ON [xp_ndo_enumusersids]
+TO PUBLIC
+GO
+```</p>
+]]></content>
+  </entry>
+  
+</feed>
